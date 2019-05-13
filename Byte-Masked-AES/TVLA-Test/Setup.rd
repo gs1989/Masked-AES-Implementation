@@ -1,4 +1,4 @@
-#Measurement Setup
+# Measurement Setup
 -Scope:			LeCroy WavePro 760Zi-A
 
 -Sampling Rate: 	50MSa/s
@@ -17,13 +17,13 @@ Time Interval:		750us (Full 10 rounds)
 -ARM Toolchian:		arm-none-eabi-gcc 5.4.1 20160919
 
 
-#Leaky Samples
+# Leaky Samples
 -First Attempt:		11085
 -Second Attempt:	11088
 -Both:			9986
 
 
-#Matlab Plotting script
+# Matlab Plotting script
 
 ```
 Threshold=4.5;

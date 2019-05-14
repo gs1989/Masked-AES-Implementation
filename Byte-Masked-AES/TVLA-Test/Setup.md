@@ -1,27 +1,21 @@
 # Measurement Setup
--Scope:			LeCroy WavePro 760Zi-A
-
--Sampling Rate: 	50MSa/s
-
--Vertical Resolution:	120mV/div
--Vertical Offset:	-68mV
--Number of Samples: 	37500
--
-Time Interval:		750us (Full 10 rounds)
-
--Number of Traces:	1M
--Key:			2B 7E 15 16 28 AE D2 A6 AB F7 15 88 09 CF 4F 3C
--SCALE board:		LPC1114 (M0), Working frequency 12MHz, low pass filter on, amplifier on
--Ttest Constant:	DA 39 A3 EE 5E 6B 4B 0D 32 55 BF EF 95 60 18 90 (CRI Constant)
--Ttest Strategy:	Standard CRI processing (Random altering, test twice, use AES output as random inputs)
--ARM Toolchian:		arm-none-eabi-gcc 5.4.1 20160919
-
+- Scope:				LeCroy WavePro 760Zi-A
+- Sampling Rate: 		50MSa/s
+- Vertical Resolution:	120mV/div
+- Vertical Offset:		-68mV
+- Number of Samples: 		37500
+- Time Interval:			750us (Full 10 rounds)
+- Number of Traces:		1M
+- Key:				2B 7E 15 16 28 AE D2 A6 AB F7 15 88 09 CF 4F 3C
+- SCALE board:			LPC1114 (M0), Working frequency 12MHz, low pass filter on, amplifier on
+- Ttest Constant:		DA 39 A3 EE 5E 6B 4B 0D 32 55 BF EF 95 60 18 90 (CRI Constant)
+- Ttest Strategy:		Standard CRI processing (Random altering, test twice, use AES output as random inputs)
+- ARM Toolchian:			arm-none-eabi-gcc 5.4.1 20160919
 
 # Leaky Samples
--First Attempt:		11085
--Second Attempt:	11088
--Both:			9986
-
+- First Attempt:		11085
+- Second Attempt:	11088
+- Both:			9986
 
 # Matlab Plotting script
 

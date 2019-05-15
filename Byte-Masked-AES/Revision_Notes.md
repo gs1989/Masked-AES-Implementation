@@ -10,7 +10,7 @@ Change Log
 	- #include <scale/scale.h>
 	- scale_init() in "byte_mask_aes.c"
 	- plaintext recieving /ciphertext sending in "byte_mask_aes.c" 
-*Acquisition Setup:
+* Acquisition Setup:
 	- Added Trigger control (scale_gpio_wr( SCALE_GPIO_PIN_TRG, false/true)) 
 
 * Other changes:
@@ -19,8 +19,9 @@ Change Log
 
 Test Log
 --------
-GNU ARM Embedded Toolchain:  arm-none-eabi-gcc (15:5.4.1+svn241155-1) 5.4.1 20160919
-Success on:
+* GNU ARM Embedded Toolchain:  arm-none-eabi-gcc (15:5.4.1+svn241155-1) 5.4.1 20160919
+
+* Success on:
 	- M0:	LPC1114fn28	(26th April 2019)
 
 

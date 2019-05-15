@@ -52,10 +52,10 @@ To make this clear, I will wrote a small table here to remind us what is stored 
 - A(1) and A(2) are the two shares of the first plaintext block
 - A(1)_1 is the LSB of the first share of plaintext A
 Now, the i-th bit register in this implementation looks like:
-
+```
 bit |   0   |   1   |   2   |   3   |  ...  |   31   |
     |A(1)_i |A(2)_i |B(1)_i |B(2)_i |  ...  | P(2)_i |      
-
+```
 Note that this is just an exemplary table, endiness in practice could be different from here.
 
 ### A few (un-)useful facts

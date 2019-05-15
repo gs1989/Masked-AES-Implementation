@@ -40,7 +40,7 @@ GNU ARM Embedded Toolchain:  arm-none-eabi-gcc (15:5.4.1+svn241155-1) 5.4.1 2016
 Effective sources
 --------
 As this repository is a forked version of the original, we try our best to keep most codes unchanged. Not all sources files in the forder are useful for the SCALE project; more specficially, only the following files are relevent:
-	- .h files: aes_core.h aes_locl.h aes_rng.h key_schedule.h bs.h BS_maskedAES.h
-	- .c files: aes_core.c aes_rng.c bs.c BS_maskedAES.c
+- .h files: aes_core.h aes_locl.h aes_rng.h key_schedule.h bs.h BS_maskedAES.h
+- .c files: aes_core.c aes_rng.c bs.c BS_maskedAES.c
 
 

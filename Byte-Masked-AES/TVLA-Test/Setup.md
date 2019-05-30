@@ -13,9 +13,9 @@
 - ARM Toolchian:			arm-none-eabi-gcc 5.4.1 20160919
 
 # Leaky Samples
-- First Attempt:		11085
-- Second Attempt:	11088
-- Both:			9986
+- First Attempt:		12730
+- Second Attempt:	12571
+- Both:			12154
 
 # Matlab Plotting script
 

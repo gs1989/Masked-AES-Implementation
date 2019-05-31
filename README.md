@@ -21,11 +21,11 @@ Attention: interpreting TVLA results might be tricky. We strongly recommend inte
 
 ## bitsliced-masked-aes
 ### Scheme
-The bitsliced implementation slicing all the same bits from many concurrent plaintext blocks. For a 32-bit processor, this implementation will use 128 32-bit words as the input state, whereas each word represents 1 specific bit of all 32 words. 
+The bitsliced implementation "slices" all the same bits from many concurrent plaintext blocks. For a 32-bit processor, this implementation uses 128 32-bit words as its input state, whereas each word represents 1 specific bit of all 32 words. 
 
 The masking part uses a (slightly-modified) 2-share ISW scheme, which represents each intermediate state bit as 2 bit shares. This specific implementation stores both shares in the adjacent positions within one register (a technique which we called "share-slicing"). As a consequence, for the protected version, only 16 concurrent blocks are required to achieve best performance.
 
-The authors had provided [a README file](bitsliced-masked-aes/README.md), briefly explained this implementation as well as the footprint/efficiency on PC. We have also wrote a probably more detailed [scheme introduction](](bitsliced-masked-aes/Scheme_Introduction.md), further explains facts that may or may not affect its security in practice.
+The authors had provided [a README file](bitsliced-masked-aes/README.md), briefly explained this implementation as well as the footprint/efficiency on PC. We have also provided a probably more detailed [scheme introduction](bitsliced-masked-aes/Scheme_Introduction.md), further explains facts that may or may not affect its security in practice.
 
 ### Code Adaption 
 All the code changes during the adaption procedure are documented in the [Revision Notes](bitsliced-masked-aes/Revision_Notes.md)
@@ -36,7 +36,7 @@ We have performed 1st order TVLA test with 500K traces on an NXP LPC1114 \(Corte
 
 ![Ttest results](bitsliced-masked-aes/TVLA-Test/Ttest.PNG) 
 
-Readers may notice that there are 34 "peaks" on this trace: it is very likely this corresponds to the [34 AND2 "gates"](bitsliced-masked-aes/bs.c) within the Sbox. You might notice that two AND2 have smaller peaks (around 7300 and 8300): these two should correspond to M32 and M35, which get one of the input from the previous AND2 gates. As the probrablity of these inputs equals to 1 is lower than normal input bits (around 25\% v.s. 50\%), it seems the T statistics also reflect this phenomena. Bear in mind that this is just my personal conjecture; I did NOT validate the sources of these leakages.  
+Readers may notice that there are 34 "peaks" on this trace: it is very likely these correspond to the [34 AND2 "gates"](bitsliced-masked-aes/bs.c) within the Sbox. You might notice that two AND2 have smaller peaks (around 7300 and 8300): these two should correspond to M32 and M35, which get one of the inputs from the previous AND2 gates. As the probability of these inputs equal to 1 is lower than normal input bits (around 25\% v.s. 50\%), it seems the T statistics also reflect this phenomenon. Bear in mind that this is just my personal conjecture; I did NOT validate the sources of these leakages.  
 
 Corresponding experiment setups can be found in [Setup.md](bitsliced-masked-aes/TVLA-Test/Setup.md)
 

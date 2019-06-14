@@ -15,6 +15,11 @@ We have performed 1st order standard CRI TVLA test with 1 million traces on an N
 
 Note that according to [the CRI's standard](https://csrc.nist.gov/csrc/media/events/non-invasive-attack-testing-workshop/documents/08_goodwill.pdf), only the same leakage samples show up in both attempts as "leaky" with the same polarity will be counted as leakage.
 
+### Security Evaluation based on simulation
+Simulation results based on our Cortex M0-based power simulator [ELMO](https://github.com/bristol-sca/ELMO) have been added to the new directory named "ELMO". 
+
+![ELMO Ttest results](Byte-Masked-AES/ELMO/Ttest.png) 
+
 Corresponding experiment setups can be found in [Setup.md](Byte-Masked-AES/TVLA-Test/Setup.md) .
 
 Attention: interpreting TVLA results might be tricky. We strongly recommend interested readers to read our [Caution Notes](Byte-Masked-AES/TVLA-Test/Caution-Notes.md)
@@ -37,6 +42,11 @@ We have performed 1st order TVLA test with 500K traces on an NXP LPC1114 \(Corte
 ![Ttest results](bitsliced-masked-aes/TVLA-Test/Ttest.PNG) 
 
 Readers may notice that there are 34 "peaks" on this trace: it is very likely these correspond to the [34 AND2 "gates"](bitsliced-masked-aes/bs.c) within the Sbox. You might notice that two AND2 have smaller peaks (around 7300 and 8300): these two should correspond to M32 and M35, which get one of the inputs from the previous AND2 gates. As the probability of these inputs equal to 1 is lower than normal input bits (around 25\% v.s. 50\%), it seems the T statistics also reflect this phenomenon. Bear in mind that this is just my personal conjecture; I did NOT validate the sources of these leakages.  
+
+### Security Evaluation based on simulation
+Simulation results based on our Cortex M0-based power simulator [ELMO](https://github.com/bristol-sca/ELMO) have been added to the new directory named "ELMO". Simulating the AES-based randomness generating is way too slow for ELMO, so we are using the ELMO randbyte function to generate the neccessary randomness. Note that here we are only testing the first Sbox in the first round.
+
+![ELMO Ttest results](bitsliced-masked-aes/ELMO/Ttest.png) 
 
 Corresponding experiment setups can be found in [Setup.md](bitsliced-masked-aes/TVLA-Test/Setup.md)
 

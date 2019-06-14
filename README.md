@@ -16,7 +16,7 @@ We have performed 1st order standard CRI TVLA test with 1 million traces on an N
 Note that according to [the CRI's standard](https://csrc.nist.gov/csrc/media/events/non-invasive-attack-testing-workshop/documents/08_goodwill.pdf), only the same leakage samples show up in both attempts as "leaky" with the same polarity will be counted as leakage.
 
 ### Security Evaluation based on simulation
-Simulation results based on our Cortex M0-based power simulator [ELMO](https://github.com/bristol-sca/ELMO) have been added to the new directory named "ELMO". 
+Simulation results based on our Cortex M0-based power simulator [ELMO](https://github.com/bristol-sca/ELMO) have been added to the new directory named "ELMO". Note that only the first round encryption is tested in ELMO
 
 ![ELMO Ttest results](Byte-Masked-AES/ELMO/Ttest.png) 
 

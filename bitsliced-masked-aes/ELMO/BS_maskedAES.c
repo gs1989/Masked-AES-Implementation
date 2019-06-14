@@ -1,4 +1,4 @@
-//Trivial implementation of byte-wise AES masking scheme from the DPA Book
+//Blockwise bitsliced implementation of AES masking scheme
 //For ELMO: 
 //Triggered Perfiod=first round
 //Instruction Count=2278
